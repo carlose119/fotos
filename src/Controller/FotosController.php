@@ -16,6 +16,7 @@ class FotosController extends AppController {
 
     public function beforeFilter(Event $event) {
         parent::beforeFilter($event);
+        $this->Auth->allow(['lista', 'contacto']);
 
         $this->viewBuilder()->setLayout('admin');
     }
@@ -116,7 +117,7 @@ class FotosController extends AppController {
         if ($this->Fotos->delete($foto)) {
             $this->Flash->success(__('The foto has been deleted.'));
 
-            if ($account->photo != '') {
+            if ($foto->photo != '') {
                 $path = new \Proffer\Lib\ProfferPath($this->Fotos, $foto, 'photo', $this->Fotos->behaviors()->Proffer->config('photo'));
                 $path->deleteFiles($path->getFolder(), true);
             }

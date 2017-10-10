@@ -45,33 +45,12 @@ class FotosTable extends Table {
                 'dir' => 'photo_dir', // The name of the field to store the folder
                 'thumbnailSizes' => [// Declare your thumbnails
                     'square' => [// Define the prefix of your thumbnail
-                        'w' => 250, // Width
-                        'h' => 250, // Height
+                        'w' => 350, // Width
+                        'h' => 350, // Height
                         'fit' => true,
-                        'orientate' => true,
+                        //'orientate' => true,
                         'jpeg_quality' => 100
-                    ],
-                    'thumbnail' => [// Define a 2 thumbnail
-                        'w' => 55,
-                        'h' => 45,
-                        'fit' => true,
-                        'orientate' => true,
-                        'jpeg_quality' => 100
-                    ],
-                    'medium' => [// Define a 3 thumbnail
-                        'w' => 350,
-                        'h' => 300,
-                        'fit' => true,
-                        'orientate' => true,
-                        'jpeg_quality' => 100
-                    ],
-                    'large' => [// Define a 4 thumbnail
-                        'w' => 1024,
-                        'h' => 950,
-                        'fit' => true,
-                        'orientate' => true,
-                        'jpeg_quality' => 100
-                    ],
+                    ]
                 ],
                 'thumbnailMethod' => 'gd' // Options are Imagick or Gd
             ]
@@ -102,9 +81,9 @@ class FotosTable extends Table {
                 ->add('photo', 'proffer', [
                     'rule' => ['dimensions', [
                             'min' => ['w' => 300, 'h' => 300],
-                            'max' => ['w' => 3000, 'h' => 3000]
+                            'max' => ['w' => 10000, 'h' => 10000]
                         ]],
-                    'message' => __('La imagen no tiene correctas dimensiones. (Minimo: 300px | Maximo 3000px).'),
+                    'message' => __('La imagen no tiene correctas dimensiones. (Minimo: 300px | Maximo 10000px).'),
                     'provider' => 'proffer'
                 ])
                 ->add('photo', 'extension', [
