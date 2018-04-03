@@ -16,6 +16,7 @@
 		prevArrow = $('<a id="prevArrow"></a>'),
 		nextArrow = $('<a id="nextArrow"></a>'),
 		overlayVisible = false;
+                exit = $('<a id="exit"></a>'),
 		
 		
 	/* Creating the plugin */
@@ -143,7 +144,7 @@
 		// If the browser does not have support 
 		// for touch, display the arrows
 		if ( !("ontouchstart" in window) ){
-			overlay.append(prevArrow).append(nextArrow);
+			overlay.append(prevArrow).append(nextArrow).append(exit);
 			
 			prevArrow.click(function(e){
 				e.preventDefault();

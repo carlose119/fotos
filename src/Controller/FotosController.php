@@ -137,7 +137,8 @@ class FotosController extends AppController {
             ],
             'order' => [
                 'Fotos.id' => 'DESC'
-            ]
+            ],
+            'limit' => 30
         ];
         $fotos = $this->paginate($this->Fotos);
 

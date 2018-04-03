@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Home</title>
+        <title>raafatdomatphotography</title>
         <meta charset="utf-8">
         <meta name="format-detection" content="telephone=no">
-        <link rel="icon" href="images/favicon.ico">
-        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="icon" href="<?= $this->Url->build('/img/logo.png') ?>">
+        <link rel="shortcut icon" href="<?= $this->Url->build('/img/logo.png') ?>">
         <?= $this->Html->css('stuck.css') ?>
         <?= $this->Html->css('owl.carousel.css') ?>
         <?= $this->Html->css('form.css') ?>
         <?= $this->Html->css('touchTouch.css') ?>
         <?= $this->Html->css('camera.css') ?>
         <?= $this->Html->css('style.css') ?>
+        <?= $this->Html->css('estilos.css') ?>
         <?= $this->Html->script('jquery.js') ?>
         <?= $this->Html->script('jquery-migrate-1.1.1.js') ?>
         <?= $this->Html->script('script.js') ?>
@@ -80,10 +81,14 @@
                             <div class="menu_block">
                                 <nav class="horizontal-nav full-width horizontalNav-notprocessed">
                                     <ul class="sf-menu">
-                                        <li <?php if($this->request->getParam('controller') == 'Fotos' && $this->request->getParam('pass.0') == '1') echo 'class="current"'; ?>><?= $this->Html->link('B&N', ['controller' => 'Fotos', 'action' => 'lista', 1]) ?></li>
-                                        <li <?php if($this->request->getParam('controller') == 'Fotos' && $this->request->getParam('pass.0') == '2') echo 'class="current"'; ?>><?= $this->Html->link('Color', ['controller' => 'Fotos', 'action' => 'lista', 2]) ?></li>
-                                        <li <?php if($this->request->getParam('controller') == 'Pages' && $this->request->getParam('pass.0') == 'biografia') echo 'class="current"'; ?>><?= $this->Html->link('Biografia', ['controller' => 'Pages', 'action' => 'display', 'biografia']) ?></li>
-                                        <li <?php if($this->request->getParam('controller') == 'Fotos' && $this->request->getParam('action') == 'contacto') echo 'class="current"'; ?>><?= $this->Html->link('Contacto', ['controller' => 'Fotos', 'action' => 'contacto']) ?></li>
+                                        <li <?php if ($this->request->getParam('controller') == 'Fotos' && $this->request->getParam('pass.0') == '1') echo 'class="current"'; ?>><?= $this->Html->link('B&W', ['controller' => 'Fotos', 'action' => 'lista', 1]) ?></li>
+                                        <li <?php if ($this->request->getParam('controller') == 'Fotos' && $this->request->getParam('pass.0') == '2') echo 'class="current"'; ?>><?= $this->Html->link('Color', ['controller' => 'Fotos', 'action' => 'lista', 2]) ?></li>
+                                        <li <?php if ($this->request->getParam('controller') == 'Fotos' && $this->request->getParam('pass.0') == '3') echo 'class="current"'; ?>><?= $this->Html->link('Personal', ['controller' => 'Fotos', 'action' => 'lista', 3]) ?></li>
+                                        <li <?php if ($this->request->getParam('controller') == 'Biografias' && $this->request->getParam('action') == 'show') echo 'class="current"'; ?>><?= $this->Html->link('Bio', ['controller' => 'Biografias', 'action' => 'show']) ?></li>
+                                        <li <?php if ($this->request->getParam('controller') == 'Fotos' && $this->request->getParam('action') == 'contacto') echo 'class="current"'; ?>><?= $this->Html->link('Contact', ['controller' => 'Fotos', 'action' => 'contacto']) ?></li>
+                                        <li><a href="https://www.instagram.com/raafatphotography/" target="_blank">Instagram</a></li>
+                                        <li><a href="https://twitter.com/raava3000/" target="_blank">Twitter</a></li>
+                                        <li><a href="https://www.facebook.com/raava3000/" target="_blank">Facebook</a></li>
                                     </ul>
                                 </nav>
                                 <div class="clear"></div>
@@ -101,12 +106,12 @@
                         <div class="grid_12">							
                             <div class="gallery">
                                 <div class="row">
-                                    
+
                                     <?= $this->Flash->render() ?>
                                     <div class="">
                                         <?= $this->fetch('content') ?>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -127,7 +132,7 @@
                                 <a href="#" class="fa fa-pinterest"></a>
                         </div>-->
                         <div class="copy">
-                            <span class="brand">RaafatDomat</span> &copy; <span id="copyright-year"></span>                            
+                            <!--<span class="brand">&copy;raafatdomat</span>-->
                         </div>
                     </div>
                 </div>
