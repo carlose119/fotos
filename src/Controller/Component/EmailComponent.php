@@ -19,8 +19,10 @@ class EmailComponent extends Component {
             'port' => 465, //puerto de conexion
             //'tls' => true, //true en caso de usar encriptacion tls
             //cuenta de correo gmail completa desde donde enviaran el correo
-            'username' => 'raava30000@gmail.com',
-            'password' => '30000raava', //contrasena
+            //'username' => 'raava30000@gmail.com',
+            //'password' => '30000raava', //contrasena
+            'username' => 'raafatdomat@gmail.com',
+            'password' => '@#Dios54', //contrasena
             //Establecemos que vamos a utilizar el envio de correo por smtp
             'className' => 'Smtp',
             //evitar verificacion de certificado ssl ---IMPORTANTE---

@@ -1,13 +1,6 @@
 <div class="grid_5">
-    <h3>Info Contact</h3>
-    <p>24/7 support is on for all <span class="color1"><a href="http://www.templatemonster.com/website-templates.php" rel="nofollow">premium designs</a></span> of TemplateMonster. Free templates go without it.</p>
-    <p>Need help in customization? Ask guys from <span class="color1"><a href="http://www.templatetuning.com/" rel="nofollow">TemplateTuning</a></span>.</p>
-    The Company Name Inc. <br>
-    9870 St Vincent Place,<br>
-    Glasgow, DC 45 Fr 45.<br>
-    Telephone: +1 800 603 6035<br>
-    FAX: +1 800 889 9898<br>
-    E-mail: <a href="#">mail@demolink.org</a>
+    <h3>Info Contact</h3>    
+    E-mail: <a href="mailto:raafat@raafatdomatphotography.com.ve">raafat@raafatdomatphotography.com.ve</a>
 </div>
 <div class="grid_6 preffix_1">
     <h3>Form Contact</h3>    
