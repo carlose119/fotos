@@ -7,14 +7,14 @@ use Cake\Mailer\Email;
 
 class EmailComponent extends Component {
     
-    public $correo_principal = 'raava30000@gmail.com';
-    public $subject = 'raava3000';
+    public $correo_principal = 'raafat@raafatdomatphotography.com.ve';
+    public $subject = 'raafatdomatphotography';
 
     public function conectar_email() {
         /* configuramos las opciones para conectarnos al servidor
           smtp de Gmail
          */
-        return Email::configTransport('mail', [
+        /*return Email::configTransport('mail', [
             'host' => 'ssl://smtp.gmail.com', //servidor smtp con encriptacion ssl
             'port' => 465, //puerto de conexion
             //'tls' => true, //true en caso de usar encriptacion tls
@@ -33,20 +33,20 @@ class EmailComponent extends Component {
                     'allow_self_signed' => true
                 ]
             ]
-        ]);
+        ]);*/
         
-        /*return Email::configTransport('mail', [
+        return Email::configTransport('mail', [
             'className' => 'Mail',
             // The following keys are used in SMTP transports
             'host' => 'localhost',
             'port' => 25,
             'timeout' => 30,
-            'username' => 'paqueton@paqueton.pe',
-            'password' => 'paqueton2016',
+            'username' => 'raafat@raafatdomatphotography.com.ve',
+            'password' => '@#Dios54',
             'client' => null,
             'tls' => null,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
-        ]);*/
+        ]);
         /* fin configuracion de smtp */
     }
     
