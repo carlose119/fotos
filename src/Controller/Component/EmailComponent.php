@@ -7,42 +7,21 @@ use Cake\Mailer\Email;
 
 class EmailComponent extends Component {
     
-    public $correo_principal = 'raafat@raafatdomatphotography.com.ve';
-    public $subject = 'raafatdomatphotography';
+    public $correo_principal = '';
+    public $subject = '';
 
     public function conectar_email() {
         /* configuramos las opciones para conectarnos al servidor
           smtp de Gmail
          */
-        /*return Email::configTransport('mail', [
-            'host' => 'ssl://smtp.gmail.com', //servidor smtp con encriptacion ssl
-            'port' => 465, //puerto de conexion
-            //'tls' => true, //true en caso de usar encriptacion tls
-            //cuenta de correo gmail completa desde donde enviaran el correo
-            //'username' => 'raava30000@gmail.com',
-            //'password' => '30000raava', //contrasena
-            'username' => 'raafatdomat@gmail.com',
-            'password' => '@#Dios54', //contrasena
-            //Establecemos que vamos a utilizar el envio de correo por smtp
-            'className' => 'Smtp',
-            //evitar verificacion de certificado ssl ---IMPORTANTE---
-            'context' => [
-                'ssl' => [
-                    'verify_peer' => false,
-                    'verify_peer_name' => false,
-                    'allow_self_signed' => true
-                ]
-            ]
-        ]);*/
-        
         return Email::configTransport('mail', [
             'className' => 'Mail',
             // The following keys are used in SMTP transports
             'host' => 'localhost',
             'port' => 25,
             'timeout' => 30,
-            'username' => 'raafat@raafatdomatphotography.com.ve',
-            'password' => '@#Dios54',
+            'username' => '',
+            'password' => '',
             'client' => null,
             'tls' => null,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
